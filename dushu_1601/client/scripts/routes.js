@@ -9,11 +9,11 @@ function config($stateProvider, $urlRouterProvider) {
       abstract: true,
       templateUrl: 'client/templates/tabs.html',
       resolve: {
-        // user() {
-        //   if (!Meteor.user()) {
-        //     throw 'AUTH_REQUIRED';
-        //   }
-        // },
+        user() {
+          if (!Meteor.user()) {
+            throw 'AUTH_REQUIRED';
+          }
+        },
       }
     })
     .state('tab.chat', {

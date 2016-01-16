@@ -12,7 +12,7 @@
               <img ng-src="{{message.picture}}">
             </div>
           </ng-switch>
-          <span class="message-timestamp">{{message.timestamp}}</span>
+          <span class="message-timestamp">{{message.timestamp | amDateFormat: 'HH:MM'}}</span>
         </div>
       </div>
     </div>
@@ -30,7 +30,7 @@
     </label>
 
     <span ng-if="chat.message.length > 0">
-      <button ng-click="chat.sendMessage()" class="button button-clear button-positive">Send</button>
+      <button ng-click="chat.sendMessage()" class="button button-clear button-positive">发表</button>
     </span>
   </ion-footer-bar>
 </ion-view>
