@@ -1,4 +1,4 @@
-<ion-view title="读书分享">
+<ion-view view-title="读书分享">
   <ion-nav-buttons side="right">
     <button class="button button-clear"><img class="header-picture" ng-src="{{  }}"></button>
   </ion-nav-buttons>
@@ -12,13 +12,12 @@
               <img ng-src="{{message.picture}}">
             </div>
           </ng-switch>
-          <span class="message-timestamp">{{message.timestamp | amDateFormat: 'HH:MM'}}</span>
+          <span class="message-timestamp">{{message.timestamp}}</span>
         </div>
       </div>
     </div>
   </ion-content>
   <ion-footer-bar keyboard-attach class="bar-stable footer-chat item-input-inset">
-    <button class="button button-clear button-icon button-positive icon ion-ios-upload-outline"></button>
 
     <label class="item-input-wrapper">
       <input
@@ -32,11 +31,6 @@
 
     <span ng-if="chat.message.length > 0">
       <button ng-click="chat.sendMessage()" class="button button-clear button-positive">Send</button>
-    </span>
-    <span ng-if="!chat.message || chat.message.length === 0">
-      <button ng-click="chat.sendPicture()" class="button button-clear button-icon button-positive icon ion-ios-camera-outline"></button>
-      <i class="buttons-seperator icon ion-android-more-vertical"></i>
-      <button class="button button-clear button-icon button-positive icon ion-ios-mic-outline"></button>
     </span>
   </ion-footer-bar>
 </ion-view>

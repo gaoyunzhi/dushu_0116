@@ -1,5 +1,5 @@
 angular
-  .module('Whatsapp')
+  .module('Root')
   .config(config);
  
 function config($stateProvider, $urlRouterProvider) {
